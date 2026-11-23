@@ -1,0 +1,25 @@
+{
+  "version": "0.2.1",
+  "portfolio_label": "U.S. stock and bond portfolio",
+  "decision_date": "2026-11-23",
+  "horizon_years": 7,
+  "scheduled_withdrawals": false,
+  "tickers": [
+    "BIL",
+    "IEF",
+    "LQD",
+    "VTI"
+  ],
+  "benchmark_weights": [
+    0,
+    0.2,
+    0.2,
+    0.6
+  ],
+  "return_premium": 0.04,
+  "additional_annual_cost": 0.0025,
+  "volatility_limit": 0.12,
+  "equity_weight_limit": 1.0,
+  "window_months": 60,
+  "equity_return_shift": 0.0
+}

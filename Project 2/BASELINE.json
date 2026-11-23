@@ -1,0 +1,256 @@
+{
+  "version": "0.1.0",
+  "created_utc": "2026-11-19T22:47:18.903136+00:00",
+  "purpose": "Preserved starting version for later comparison; not a human AI-off prediction or GitHub commit.",
+  "working_folder": "Project 2",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "be3b1b47ae146191b7deb40564f5e0a8203dfb602f8c8bc2638c14d10fbdd40e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "f4dbe506510d4da487fa41d090b33098e975caea31dbedd26a598ca575c8a077"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0d11027513d79411db8e4f6fb84aff78c80de1ddd5d9e2dec547ddecaa1cd05e"
+    },
+    {
+      "path": "app.py",
+      "sha256": "e7731cdde5aa1f8b93ca83622ca73df951cd51d0f9e240efb311dbd67791e7e6"
+    },
+    {
+      "path": "config.json",
+      "sha256": "85c598718e1c8f17edda6a9ac300391940b3a5a093809990f53d37ed21944d3e"
+    },
+    {
+      "path": "docs/cold-run.md",
+      "sha256": "94a2b3f4580c35d1538584ec98abacbbae5e22e8c9feb0f5cf2c17d2f1d777ed"
+    },
+    {
+      "path": "docs/data-card.md",
+      "sha256": "1ee7c8c4cdfac3639a2537c68654d23062d48e6da071e4b305807710043b8672"
+    },
+    {
+      "path": "docs/decision-memo.md",
+      "sha256": "96df2444b04891a120335f35fcc7e398a795f7188dc39634cd4e4bcef7021b4b"
+    },
+    {
+      "path": "docs/lab-map.md",
+      "sha256": "1485b06899a461ba555432b8f421cf1324423264da7d5f539768d74dbebab03f"
+    },
+    {
+      "path": "docs/locked-changed-input.md",
+      "sha256": "188466c3f2462d3edeaa58793238d393a19746d5a4fe8e0f6cf25265b517fcb5"
+    },
+    {
+      "path": "docs/mandate.md",
+      "sha256": "4c552a8e100ebe5d00d9f75f31039283bb8c94624dbdf6cf43059cdbf7144f5d"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "sha256": "fc6b321c9acbdb8093f9e69dc1289c7605dfe470cd4510ea0c98c1e71abb7fe7"
+    },
+    {
+      "path": "docs/submission-manifest.md",
+      "sha256": "ae50597b775091eaf74d742f7237b96469760baf69a0a9366ec2a2f9a4db8389"
+    },
+    {
+      "path": "docs/validation-and-ai-use.md",
+      "sha256": "a2a008ec9ac8bcfc02882458030bbffd199f07deb9286068b0ca5686084bfb83"
+    },
+    {
+      "path": "model.py",
+      "sha256": "1654462d0ade890bd0a894720107579e2e3aa02bf5c004c7e6402b2429a05624"
+    },
+    {
+      "path": "outputs/UI-check.md",
+      "sha256": "c739769ace7aa104bf3a1939cc33e833953fe4cd352ad579988ea99c6cbd0ffc"
+    },
+    {
+      "path": "outputs/Verification.txt",
+      "sha256": "bb9f624b845c30ddff6d2babb149486ff93cd02e02c46496bd10f790d8a73d1b"
+    },
+    {
+      "path": "outputs/cold-run.json",
+      "sha256": "fc0b1cbc76581a1bc0958cc37ffadac6c8d665e5f929ade973ebc8fc04883273"
+    },
+    {
+      "path": "outputs/cold-run.txt",
+      "sha256": "861638e8d8118147c32df259869130c0722663a7764c53d92bd79ffae0b4227e"
+    },
+    {
+      "path": "outputs/results.json",
+      "sha256": "eb3253388a481db5c10446958e2dbcb0d5235354c4ae011cfa195174d0bec2c6"
+    },
+    {
+      "path": "outputs/visible-output.md",
+      "sha256": "51115f8f2d47e265ad3dba1325ebfaa2bc5b033f3f50c35a9ddd8358705a8976"
+    },
+    {
+      "path": "panel.py",
+      "sha256": "dc67640694ef06fbfd50e0218649493fb075b9d74c84b2690d63d3d12931637a"
+    },
+    {
+      "path": "portfolio.py",
+      "sha256": "944843d95875e26b4bfc8fab8bf9a2316168b866746f809a2ba1a9a428708661"
+    },
+    {
+      "path": "prices.csv",
+      "sha256": "8f5beec08832fa9f8fd13afaf94569a3df8852f46d290aae08e459650f6df9d9"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "03ab59d623b3a16f80ac0067dd9a75865704cd32e82f26884d5469bd7aad9bdd"
+    },
+    {
+      "path": "research/memos/NVDA-buffett-memo.md",
+      "sha256": "88883451ce9562257b70123d5fdb62e68688be4131d0e5514c95e81a49f9c7a2"
+    },
+    {
+      "path": "research/memos/NVDA-buffett-memo.meta.json",
+      "sha256": "8ec38d56d6d1af79b4d3dc4a350fcc166d7eb73823e1da4dbe1cc7416ce61aba"
+    },
+    {
+      "path": "research/memos/NVDA-burry-memo.md",
+      "sha256": "62a11421228081c84f45af49cf281552174a1c9f8da7d5a536f890186e737551"
+    },
+    {
+      "path": "research/memos/NVDA-burry-memo.meta.json",
+      "sha256": "0fae28f374cdc29051e465e1b5aa729a8d9920b780e37ab3b39554e2ce836443"
+    },
+    {
+      "path": "research/memos/NVDA-cathie-wood-memo.md",
+      "sha256": "5b8153925fb42cb7b1de875431dc2d5e67242e3566383a003ae5dd52af794479"
+    },
+    {
+      "path": "research/memos/NVDA-cathie-wood-memo.meta.json",
+      "sha256": "2918aa5af08494a33bcf786334cf76d638ea243b89e6ca61f7995d6d4057b625"
+    },
+    {
+      "path": "research.py",
+      "sha256": "fddc6ab11031fc822f851f562e8e426a3b051011c0abededcac9c94afbff9fc5"
+    },
+    {
+      "path": "run.py",
+      "sha256": "1165295936bcccab988693c1e24ee5c3a94a0cc222f51ca8c956d83fcb247b22"
+    },
+    {
+      "path": "sec_facts.py",
+      "sha256": "05dc2b1b3230b9d9ca56af3f5b89093d0263ac9ab157e1826cb59b490a63e0e0"
+    },
+    {
+      "path": "signal_data.py",
+      "sha256": "dfad00ca91b6ffa38bf25ae1f31d8b335e8e6de090db481db8245ada0343c17d"
+    },
+    {
+      "path": "skills/buffett-sec/SKILL.md",
+      "sha256": "4dbc01cee04383c2f81217370c1734bc11da406d9cc892955300a421b6cc8ac4"
+    },
+    {
+      "path": "skills/buffett-sec/scripts/sec_facts.py",
+      "sha256": "b40b360ca5734f9efb20ba38752477d125926d007ce4074adf610da5464a2b94"
+    },
+    {
+      "path": "skills/burry-sec/SKILL.md",
+      "sha256": "d89edbc1d11891c92c1e99873f4edd77a062329f9290bfb34a1175a16753435b"
+    },
+    {
+      "path": "skills/cathie-wood-sec/SKILL.md",
+      "sha256": "684c7b105edf074334601113af6239af73fee0ee072c2dcd511efdaa50821ce7"
+    },
+    {
+      "path": "skills/cathie-wood-sec/policy.json",
+      "sha256": "514eedf0121ff13d5b4c6730b63674c9ee9737243484a8bc9a84d037b545e522"
+    },
+    {
+      "path": "sources/Assignment.md",
+      "sha256": "83ccb5bacd20e6be64ecda6b3dbc75586591cfa974449ad1b6ab6cc96929645e"
+    },
+    {
+      "path": "sources/NVDA-companyfacts.json",
+      "sha256": "19ef503a5770f5660964b3c3aea6937579d9b359da344afe6a9adf59c63d26ff"
+    },
+    {
+      "path": "sources/NVDA-manifest.json",
+      "sha256": "03f0afc581627f0273b9bb5f6c48bed5005168e2296a7cdbad1f1fbfe893ea80"
+    },
+    {
+      "path": "sources/NVDA-tickers.json",
+      "sha256": "7aecfc123ae392e6ed017effca46f815bf221d77875e597bb495b3d9625dc5df"
+    },
+    {
+      "path": "sources/Prices.json",
+      "sha256": "e772eba97a1e178c418ca34035c262df85998bc2f4164de9b66aafdec8958884"
+    },
+    {
+      "path": "sources/VT-fact-sheet.pdf",
+      "sha256": "e3d4e8e5577971634e1733e3712ef32f61f9cfb90b3b8cb8d578f2aa3a1a9dd4"
+    },
+    {
+      "path": "sources/VT-fact-sheet.source.json",
+      "sha256": "59507366191ff10c95bcb6cdcd4eb71c4dc655cd1b9028176e1a1e87c658e598"
+    },
+    {
+      "path": "sources/cpi/CPIAUCSL-current-2026-10-29.csv",
+      "sha256": "8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549"
+    },
+    {
+      "path": "sources/cpi/CPIAUCSL-vintage-2025-01-15.csv",
+      "sha256": "980758236d9421866fc33d7ec801146f81e8bd9810df69652cb975bfce03e869"
+    },
+    {
+      "path": "sources/cpi/CPIAUCSL-vintage-2026-09-30.csv",
+      "sha256": "45d0f40dc41567bc3ce03fb73845d647a0b5a6b34e8874959f5106a791683a85"
+    },
+    {
+      "path": "sources/cpi/CPIAUCSL-vintage-2026-10-29.csv",
+      "sha256": "b76be8046742a825431af0d2d27fe763e1839b44307ebe009e0ac6ba94b64651"
+    },
+    {
+      "path": "sources/cpi-manifest.json",
+      "sha256": "0bf85657d201be6fd1f0b201e611f66bab8b4ff79de5da44698a92d1490cd6d4"
+    },
+    {
+      "path": "sources/import-manifest.json",
+      "sha256": "fd94039a1cac4550ef0d1414d6ed82b131d69100003f533ba4c9d6767ae36b9f"
+    },
+    {
+      "path": "sources/lab-reference/Lab13-mandate.md",
+      "sha256": "5e746f2de2012b5c4a6dc1f3fe44f14280398fc6d65d1cba2c3f3e7c5cb2a8df"
+    },
+    {
+      "path": "sources/lab-reference/Lab14-results.json",
+      "sha256": "554e1705fe33b3620e0dfc1db31637b49b432aac8a82ec639ddc4e66eeb54801"
+    },
+    {
+      "path": "sources/lab-reference/Lab15-results.json",
+      "sha256": "ce964a6a080d27aae5e00a50ceecdc2b501913e56f04bf8d8d3046d269741a81"
+    },
+    {
+      "path": "sources/lab-reference/Lab16-asof.py",
+      "sha256": "c96f14233b6e9bb3066e4d60a93944daffaecec96b8b98ac4d40e13673c00898"
+    },
+    {
+      "path": "sources/yahoo/BIL.json",
+      "sha256": "ae048d0234dfd6b22fa4f392bfa5272617dffcf6402ceeee2c98a8d93f999f17"
+    },
+    {
+      "path": "sources/yahoo/IEF.json",
+      "sha256": "e2b3a77c4eaf311ab249b3c25e7337fa7c15348b7216acff07c9f0b5ae18fe7b"
+    },
+    {
+      "path": "sources/yahoo/LQD.json",
+      "sha256": "597b8cde851e13a9517afda79ffc279cd8d8ea950155acc94c078376b7190c9c"
+    },
+    {
+      "path": "sources/yahoo/VT.json",
+      "sha256": "1ade44b7efd83f85b6067b156c8cd0ea7fc6df8e9413db9ebcadcf8277a5a0d1"
+    },
+    {
+      "path": "support/check_results.py",
+      "sha256": "4c83f7e90212948dbbde3716b8e753abcc2091dc9932436b5b6df330e2867c8f"
+    }
+  ]
+}

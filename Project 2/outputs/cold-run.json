@@ -1,0 +1,13 @@
+{
+  "version": "0.2.1",
+  "performed_by": "Codex automated isolated local run; not a partner or fresh dependency install",
+  "run_utc": "2026-11-23T04:36:31.681261+00:00",
+  "command": "python3 run.py",
+  "elapsed_seconds": 0.4216,
+  "exit_code": 0,
+  "first_failure": null,
+  "output_hashes": {
+    "results.json": "1747e9d8d97192273049f68b34bbc66eae6f20a0d0cf0618ddb18f139b214806",
+    "visible-output.md": "20229f1e957d993987507745e2d64164bbbbed79ecfb14d878dd7aea2359eb21"
+  }
+}

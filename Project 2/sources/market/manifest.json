@@ -1,0 +1,66 @@
+{
+  "version": "0.2.0",
+  "decision_date": "2026-11-23",
+  "tickers": [
+    "BIL",
+    "IEF",
+    "LQD",
+    "VTI"
+  ],
+  "first_month": "2016-10-01",
+  "last_month": "2026-10-01",
+  "levels": 121,
+  "price_csv": "sources/market/prices.csv",
+  "price_csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47",
+  "sources": [
+    {
+      "ticker": "BIL",
+      "file": "sources/market/BIL.json",
+      "sha256": "859603ccdc19bee620bc71998bf1beea1697f933045ccef17acafff97e5a8edb",
+      "downloaded_utc": "2026-11-22T20:53:59.254002+00:00",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/BIL?period1=1475280000&period2=1793491200&interval=1mo&events=history&includeAdjustedClose=true",
+      "currency": "USD",
+      "field": "indicators.adjclose[0].adjclose"
+    },
+    {
+      "ticker": "IEF",
+      "file": "sources/market/IEF.json",
+      "sha256": "416ea565209ecea4a07e1aa2271d8fbd2bf22d2129f92df9e7d280817130221f",
+      "downloaded_utc": "2026-11-22T20:53:59.253861+00:00",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IEF?period1=1475280000&period2=1793491200&interval=1mo&events=history&includeAdjustedClose=true",
+      "currency": "USD",
+      "field": "indicators.adjclose[0].adjclose"
+    },
+    {
+      "ticker": "LQD",
+      "file": "sources/market/LQD.json",
+      "sha256": "b4e1c23b4b6bd257e1b4503f72dda79b95b3d88db60903b01acfe9c3a3ab6463",
+      "downloaded_utc": "2026-11-22T20:53:59.290506+00:00",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LQD?period1=1475280000&period2=1793491200&interval=1mo&events=history&includeAdjustedClose=true",
+      "currency": "USD",
+      "field": "indicators.adjclose[0].adjclose"
+    },
+    {
+      "ticker": "VTI",
+      "file": "sources/market/VTI.json",
+      "sha256": "50a983725f269364ad66d1d91d4f720159a2f940d9d5cd6b59d9bea3a9387420",
+      "downloaded_utc": "2026-11-22T20:53:59.253862+00:00",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/VTI?period1=1475280000&period2=1793491200&interval=1mo&events=history&includeAdjustedClose=true",
+      "currency": "USD",
+      "field": "indicators.adjclose[0].adjclose"
+    }
+  ],
+  "risk_free": {
+    "series": "DGS3MO",
+    "vintage_date": "2026-11-22",
+    "file": "sources/market/DGS3MO.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+    "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+    "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+    "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+    "units": "Percent per annum, investment basis",
+    "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback."
+  },
+  "date_convention": "First day labels a completed monthly bar, not the date its close was available. October 2026 is the last completed month.",
+  "historical_limit": "Adjusted prices retrieved November 22 are a single information set for the proposed November 23 decision; they do not establish earlier point-in-time portfolio performance."
+}

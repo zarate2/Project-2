@@ -1,0 +1,30 @@
+[
+  {
+    "file": "sources/cpi/CPIAUCSL-current-2026-10-29.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+    "downloaded_utc": "2026-10-29T20:20:54.003909+00:00",
+    "sha256": "8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549",
+    "original_file": "sources/csv/CPIAUCSL-current-2026-10-29.csv"
+  },
+  {
+    "file": "sources/cpi/CPIAUCSL-vintage-2026-09-30.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL&vintage_date=2026-09-30",
+    "downloaded_utc": "2026-10-29T20:20:54.386628+00:00",
+    "sha256": "45d0f40dc41567bc3ce03fb73845d647a0b5a6b34e8874959f5106a791683a85",
+    "original_file": "sources/csv/CPIAUCSL-vintage-2026-09-30.csv"
+  },
+  {
+    "file": "sources/cpi/CPIAUCSL-vintage-2026-10-29.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL&vintage_date=2026-10-29",
+    "downloaded_utc": "2026-10-29T20:20:54.727930+00:00",
+    "sha256": "b76be8046742a825431af0d2d27fe763e1839b44307ebe009e0ac6ba94b64651",
+    "original_file": "sources/csv/CPIAUCSL-vintage-2026-10-29.csv"
+  },
+  {
+    "file": "sources/cpi/CPIAUCSL-vintage-2025-01-15.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=CPIAUCSL&vintage_date=2025-01-15",
+    "downloaded_utc": "2026-10-29T20:20:55.447501+00:00",
+    "sha256": "980758236d9421866fc33d7ec801146f81e8bd9810df69652cb975bfce03e869",
+    "original_file": "sources/csv/CPIAUCSL-vintage-2025-01-15.csv"
+  }
+]

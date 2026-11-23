@@ -1,0 +1,204 @@
+{
+  "meridian": {
+    "weights": [
+      0.0,
+      0.2,
+      0.25,
+      0.55
+    ],
+    "return": 0.0651,
+    "volatility": 0.0944171594573783,
+    "reserve": 0.2,
+    "meets_objective": true
+  },
+  "meridian_equity_minus_one": {
+    "weights": [
+      0.0,
+      0.1,
+      0.1,
+      0.8
+    ],
+    "return": 0.06530000000000001,
+    "volatility": 0.12938701635017327,
+    "reserve": 0.1,
+    "meets_objective": true
+  },
+  "meridian_correlation_050": {
+    "weights": [
+      0.0,
+      0.4,
+      0.0,
+      0.6
+    ],
+    "return": 0.06520000000000001,
+    "volatility": 0.09727486828569855,
+    "reserve": 0.4,
+    "meets_objective": true
+  },
+  "all_months": {
+    "estimate": {
+      "sleeves": [
+        {
+          "name": "BIL",
+          "return": 0.03594275309229489,
+          "volatility": 0.005067958780452747,
+          "reserve": true
+        },
+        {
+          "name": "IEF",
+          "return": -0.017887108729498016,
+          "volatility": 0.0765384019523967,
+          "reserve": true
+        },
+        {
+          "name": "LQD",
+          "return": -0.008059941921656912,
+          "volatility": 0.09788348166410042,
+          "reserve": false
+        },
+        {
+          "name": "VT",
+          "return": 0.11895227892371427,
+          "volatility": 0.14917163071111764,
+          "reserve": false
+        }
+      ],
+      "correlations": [
+        [
+          1.0,
+          0.20746898288385102,
+          0.2609114538689867,
+          0.20901138103681666
+        ],
+        [
+          0.20746898288385102,
+          1.0,
+          0.9338022074017914,
+          0.6280837008573069
+        ],
+        [
+          0.2609114538689867,
+          0.9338022074017914,
+          1.0,
+          0.7939278826921045
+        ],
+        [
+          0.20901138103681666,
+          0.6280837008573069,
+          0.7939278826921045,
+          1.0
+        ]
+      ],
+      "observations": 60,
+      "first_return_month": "2021-10-01",
+      "last_return_month": "2026-09-01"
+    },
+    "mix": {
+      "weights": [
+        0.75,
+        0.0,
+        0.0,
+        0.25
+      ],
+      "return": 0.05669513455014973,
+      "volatility": 0.038268299108219765,
+      "reserve": 0.75,
+      "meets_objective": true
+    }
+  },
+  "last_36": {
+    "estimate": {
+      "sleeves": [
+        {
+          "name": "BIL",
+          "return": 0.04365966981561561,
+          "volatility": 0.0021348356946603608,
+          "reserve": true
+        },
+        {
+          "name": "IEF",
+          "return": 0.030695628789993212,
+          "volatility": 0.06660142046626555,
+          "reserve": true
+        },
+        {
+          "name": "LQD",
+          "return": 0.0484282846221475,
+          "volatility": 0.07822443387506996,
+          "reserve": false
+        },
+        {
+          "name": "VT",
+          "return": 0.20247160119925517,
+          "volatility": 0.11708915581853384,
+          "reserve": false
+        }
+      ],
+      "correlations": [
+        [
+          1.0,
+          0.16745480783940977,
+          0.23521031481578464,
+          0.14747318936542247
+        ],
+        [
+          0.16745480783940977,
+          1.0,
+          0.9355878404619424,
+          0.5505369484091615
+        ],
+        [
+          0.23521031481578464,
+          0.9355878404619424,
+          1.0,
+          0.6876204653325343
+        ],
+        [
+          0.14747318936542247,
+          0.5505369484091615,
+          0.6876204653325343,
+          1.0
+        ]
+      ],
+      "observations": 36,
+      "first_return_month": "2023-10-01",
+      "last_return_month": "2026-09-01"
+    },
+    "mix": {
+      "weights": [
+        0.9,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "return": 0.05954086295397956,
+      "volatility": 0.012141898203281284,
+      "reserve": 0.9,
+      "meets_objective": true
+    }
+  },
+  "fund_equity_minus_one": {
+    "weights": [
+      0.7,
+      0.0,
+      0.0,
+      0.3
+    ],
+    "return": 0.0578456108417207,
+    "volatility": 0.0456250584870282,
+    "reserve": 0.7,
+    "meets_objective": true
+  },
+  "partner_last_36_equity_15_percent": {
+    "weights": [
+      0.85,
+      0.0,
+      0.0,
+      0.15
+    ],
+    "return": 0.059610719343273263,
+    "volatility": 0.0179210779882,
+    "reserve": 0.85,
+    "meets_objective": true
+  }
+}

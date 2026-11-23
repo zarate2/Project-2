@@ -1,0 +1,13 @@
+test_app_controls_reset_and_unavailable_date (__main__.ProjectChecks) ... ok
+test_independent_estimates_grid_and_diagnostic (__main__.ProjectChecks) ... ok
+test_information_gates_and_tampering (__main__.ProjectChecks) ... ok
+test_invalid_policy_inputs (__main__.ProjectChecks) ... ok
+test_isolated_readme_run (__main__.ProjectChecks) ... ok
+test_known_treasury_units_and_baseline_rules (__main__.ProjectChecks) ... ok
+test_saved_output_and_documents (__main__.ProjectChecks) ... ok
+test_stress_changes_do_not_relax_limits (__main__.ProjectChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.657s
+
+OK

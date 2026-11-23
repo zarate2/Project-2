@@ -1,0 +1,17 @@
+{
+  "reviewed_at_utc": "2026-11-22T20:22:34.770380+00:00",
+  "rubric_file": "sources/Project2-rubric.pdf",
+  "rubric_sha256": "e51890e2fcc4d35d30006f1814b9c8316a529b0fd8b4a709b65ae2877715c715",
+  "rubric_pages": 6,
+  "checks": [
+    "BIL: all 61 retained monthly adjusted prices match raw response; source hash verified",
+    "IEF: all 61 retained monthly adjusted prices match raw response; source hash verified",
+    "LQD: all 61 retained monthly adjusted prices match raw response; source hash verified",
+    "VT: all 61 retained monthly adjusted prices match raw response; source hash verified",
+    "All 244 modeled adjusted-price values match metadata and raw source; CSV layout and month labels match",
+    "All four retained CPI snapshots match recorded hashes",
+    "60 monthly returns: only one complete 60-month window in the retained sample; no rolling-five-year robustness established",
+    "Latest recorded isolated run hashes match current saved JSON and visible output"
+  ],
+  "scope": "Read-only audit of retained data and evidence; not a student AI-off experiment, partner run, fresh installation, or external source/license verification."
+}

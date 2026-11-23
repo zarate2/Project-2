@@ -1,0 +1,27 @@
+Project 2 — Video 3 transcript draft
+
+Source: subtitles already present in CapCut draft “1123 (1),” timeline duration about 4:24. Timestamps are approximate subtitle start times. Clear speech-recognition errors in names, tickers, and figures were corrected against the app and project files. Please listen to the recording and correct any wording that differs from what was actually said before submitting.
+
+[00:00] Hi, my name is David Zarate. This is my Video 3 for Project 2. I want to start by emphasizing that I used GPT-6 Luna to help modify, develop, and produce this financial application. I reviewed and agree with the analysis and recommendation. The decision is mine, and this is for education, not investment advice. I’m presenting an unnamed educational portfolio. No real client or capital is represented.
+
+[00:25] I’m proposing a seven-year, long-only portfolio using BIL, or Treasury bills, IEF, LQD, and VTI, which is domestic equities. There are no scheduled withdrawals. The comparison portfolio is 60% VTI, 20% Treasury notes, and 20% investment-grade corporate bonds.
+
+[00:49] The target is the dated three-month Treasury rate plus four percentage points, net of a proposed 0.25% added annual cost. The November 19 Treasury observation is 4.34%. Adding the 4% premium gives an 8.34% screening hurdle. The annualized-volatility ceiling is 12%.
+
+[01:14] These are proposed policy choices. The Treasury rate is short term and can change; it is not a guaranteed seven-year rate. The estimated returns are historical arithmetic estimates, not a compound forecast.
+
+[01:27] The equal-weight portfolio estimates 3.21% net, and the inverse-volatility portfolio estimates 3.20%, so both miss the 8.34% hurdle. The 60/40 comparison has a 6.44% net estimate and 11.98% estimated volatility. It is inside the 12% volatility limit, but it also misses the return hurdle.
+
+[01:52] The constrained screen selects 35% BIL and 65% VTI, giving an estimated net annual return of 8.61%. That exceeds the 8.34% hurdle. Its estimated volatility is 10.28%, under the 12% limit. This is a model result, not evidence that the portfolio will deliver these returns.
+
+[02:17] The stress results show how assumptions can change the allocation. With a 36-month window, the model shifts to 75% Treasury bills and 25% VTI. This gives an estimated net annual return of 8.44% and volatility of 3.21%, below the 12% limit.
+
+[02:52] The next stress changes the U.S. equity allocation limit. When I lower it to 25% and return to the 60-month window, the app reports that no portfolio is feasible and no allocation is selected under the current constraints. Tightening the equity cap to 25% produces no feasible allocation. These sensitivities use the same historical data; they are not independent validation.
+
+[03:31] My recommendation is to continue paper research only and authorize zero new capital. The model pass does not satisfy the separate deployment gate. We still need independent performance evaluation and evidence for actual costs, liquidity, and implementation, along with review of the assumptions.
+
+[03:49] If a required data source fails or no allocation meets the stated rules, stop. Do not silently relax the constraints or substitute a different date. I would reconsider moving beyond paper research only after the missing validation and implementation evidence is complete and reviewed. If the evidence does not support the process, retain zero authorization or reject it.
+
+[04:09] The app makes the comparison and the assumptions behind it visible. It does not place trades, validate a seven-year strategy, or authorize investments. The committee decision requested is to retain this as a research candidate only, with no capital allocation.
+
+Before submission, check the final recording for exact wording and figures. Update these timestamps if you edit or shorten the video.

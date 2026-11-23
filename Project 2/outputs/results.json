@@ -1,0 +1,1330 @@
+{
+  "version": "0.2.1",
+  "review_date": "2026-11-22",
+  "scenarios": {
+    "Base": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.04,
+        "additional_annual_cost": 0.0025,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 1.0,
+        "window_months": 60,
+        "equity_return_shift": 0.0
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 60,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.0834,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.03667156413091859,
+            "volatility": 0.004872127598099254,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": -0.010805919531034623,
+            "volatility": 0.07788790198546375,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": -0.0041503998636663215,
+            "volatility": 0.09851496361869454,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.1165406542667412,
+            "volatility": 0.15751474710988292,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.21541311965664622,
+            0.282853428238521,
+            0.24260457192713306
+          ],
+          [
+            0.21541311965664622,
+            1.0,
+            0.9338722092817835,
+            0.5317780796733119
+          ],
+          [
+            0.282853428238521,
+            0.9338722092817835,
+            1.0,
+            0.7128752203437682
+          ],
+          [
+            0.24260457192713306,
+            0.5317780796733119,
+            0.7128752203437682,
+            1.0
+          ]
+        ],
+        "observations": 60,
+        "first_return_month": "2021-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.07538135173318147,
+          "gross_return": 0.03456397475073971,
+          "net_return": 0.03206397475073971,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.8749365431128194,
+            0.054729969220137606,
+            0.04327060906995657,
+            0.02706287859708639
+          ],
+          "volatility": 0.01337106891030186,
+          "gross_return": 0.034468219155978294,
+          "net_return": 0.03196821915597829,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.11981960010983875,
+          "gross_return": 0.06693312868110453,
+          "net_return": 0.06443312868110453,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": {
+          "weights": [
+            0.35,
+            0.0,
+            0.0,
+            0.65
+          ],
+          "volatility": 0.1028115959860662,
+          "gross_return": 0.0885864727192033,
+          "net_return": 0.08608647271920329,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        }
+      },
+      "best_within_risk": {
+        "weights": [
+          0.25,
+          0.0,
+          0.0,
+          0.75
+        ],
+        "volatility": 0.11843745518055378,
+        "gross_return": 0.09657338173278555,
+        "net_return": 0.09407338173278555,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "PASS",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [],
+        "modeled_verdict": "PASS",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "FEASIBLE",
+      "decision": "PILOT in paper research only, with 0% new capital authorized. Consider adoption only after the assumptions are reviewed and independent performance, costs, liquidity and implementation evidence support it.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    },
+    "Estimate: VTI minus 1 percentage point": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.04,
+        "additional_annual_cost": 0.0025,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 1.0,
+        "window_months": 60,
+        "equity_return_shift": -0.01
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 60,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.0834,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.03667156413091859,
+            "volatility": 0.004872127598099254,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": -0.010805919531034623,
+            "volatility": 0.07788790198546375,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": -0.0041503998636663215,
+            "volatility": 0.09851496361869454,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.10654065426674121,
+            "volatility": 0.15751474710988292,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.21541311965664622,
+            0.282853428238521,
+            0.24260457192713306
+          ],
+          [
+            0.21541311965664622,
+            1.0,
+            0.9338722092817835,
+            0.5317780796733119
+          ],
+          [
+            0.282853428238521,
+            0.9338722092817835,
+            1.0,
+            0.7128752203437682
+          ],
+          [
+            0.24260457192713306,
+            0.5317780796733119,
+            0.7128752203437682,
+            1.0
+          ]
+        ],
+        "observations": 60,
+        "first_return_month": "2021-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.07538135173318147,
+          "gross_return": 0.032063974750739715,
+          "net_return": 0.029563974750739717,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.8749365431128194,
+            0.054729969220137606,
+            0.04327060906995657,
+            0.02706287859708639
+          ],
+          "volatility": 0.01337106891030186,
+          "gross_return": 0.03419759037000743,
+          "net_return": 0.031697590370007425,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.11981960010983875,
+          "gross_return": 0.06093312868110454,
+          "net_return": 0.058433128681104535,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": {
+          "weights": [
+            0.25,
+            0.0,
+            0.0,
+            0.75
+          ],
+          "volatility": 0.11843745518055378,
+          "gross_return": 0.08907338173278556,
+          "net_return": 0.08657338173278556,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        }
+      },
+      "best_within_risk": {
+        "weights": [
+          0.25,
+          0.0,
+          0.0,
+          0.75
+        ],
+        "volatility": 0.11843745518055378,
+        "gross_return": 0.08907338173278556,
+        "net_return": 0.08657338173278556,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "PASS",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [],
+        "modeled_verdict": "PASS",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "FEASIBLE",
+      "decision": "PILOT in paper research only, with 0% new capital authorized. Consider adoption only after the assumptions are reviewed and independent performance, costs, liquidity and implementation evidence support it.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    },
+    "Window: 36 months": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.04,
+        "additional_annual_cost": 0.0025,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 1.0,
+        "window_months": 36,
+        "equity_return_shift": 0.0
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 36,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.0834,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.04340150636313285,
+            "volatility": 0.002097886960143202,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": 0.04744676819669761,
+            "volatility": 0.06726936400820199,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": 0.0647538211694344,
+            "volatility": 0.07728575634842287,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.21758212966281204,
+            "volatility": 0.12676472825682827,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.19985312007465456,
+            0.27995376832279384,
+            0.2445236037068857
+          ],
+          [
+            0.19985312007465456,
+            1.0,
+            0.9315226757741115,
+            0.3712072127741508
+          ],
+          [
+            0.27995376832279384,
+            0.9315226757741115,
+            1.0,
+            0.5608050414733081
+          ],
+          [
+            0.2445236037068857,
+            0.3712072127741508,
+            0.5608050414733081,
+            1.0
+          ]
+        ],
+        "observations": 36,
+        "first_return_month": "2023-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.05801642588701517,
+          "gross_return": 0.09329605634801923,
+          "net_return": 0.09079605634801922,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.9303360918516418,
+            0.02901380122172965,
+            0.025253553149525147,
+            0.015396553777103337
+          ],
+          "volatility": 0.0059121070048321085,
+          "gross_return": 0.046739877936250965,
+          "net_return": 0.04423987793625096,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.09311626887687709,
+          "gross_return": 0.15298939567091363,
+          "net_return": 0.15048939567091363,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": {
+          "weights": [
+            0.75,
+            0.0,
+            0.0,
+            0.25
+          ],
+          "volatility": 0.032112181595688266,
+          "gross_return": 0.08694666218805265,
+          "net_return": 0.08444666218805265,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        }
+      },
+      "best_within_risk": {
+        "weights": [
+          0.0,
+          0.0,
+          0.1,
+          0.9
+        ],
+        "volatility": 0.11859523202566986,
+        "gross_return": 0.20229929881347428,
+        "net_return": 0.19979929881347427,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "PASS",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [],
+        "modeled_verdict": "PASS",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "FEASIBLE",
+      "decision": "PILOT in paper research only, with 0% new capital authorized. Consider adoption only after the assumptions are reviewed and independent performance, costs, liquidity and implementation evidence support it.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    },
+    "Cost: plus 1 percentage point": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.04,
+        "additional_annual_cost": 0.0125,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 1.0,
+        "window_months": 60,
+        "equity_return_shift": 0.0
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 60,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.0834,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.03667156413091859,
+            "volatility": 0.004872127598099254,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": -0.010805919531034623,
+            "volatility": 0.07788790198546375,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": -0.0041503998636663215,
+            "volatility": 0.09851496361869454,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.1165406542667412,
+            "volatility": 0.15751474710988292,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.21541311965664622,
+            0.282853428238521,
+            0.24260457192713306
+          ],
+          [
+            0.21541311965664622,
+            1.0,
+            0.9338722092817835,
+            0.5317780796733119
+          ],
+          [
+            0.282853428238521,
+            0.9338722092817835,
+            1.0,
+            0.7128752203437682
+          ],
+          [
+            0.24260457192713306,
+            0.5317780796733119,
+            0.7128752203437682,
+            1.0
+          ]
+        ],
+        "observations": 60,
+        "first_return_month": "2021-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.07538135173318147,
+          "gross_return": 0.03456397475073971,
+          "net_return": 0.02206397475073971,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.8749365431128194,
+            0.054729969220137606,
+            0.04327060906995657,
+            0.02706287859708639
+          ],
+          "volatility": 0.01337106891030186,
+          "gross_return": 0.034468219155978294,
+          "net_return": 0.021968219155978293,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.11981960010983875,
+          "gross_return": 0.06693312868110453,
+          "net_return": 0.05443312868110453,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": {
+          "weights": [
+            0.25,
+            0.0,
+            0.0,
+            0.75
+          ],
+          "volatility": 0.11843745518055378,
+          "gross_return": 0.09657338173278555,
+          "net_return": 0.08407338173278556,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        }
+      },
+      "best_within_risk": {
+        "weights": [
+          0.25,
+          0.0,
+          0.0,
+          0.75
+        ],
+        "volatility": 0.11843745518055378,
+        "gross_return": 0.09657338173278555,
+        "net_return": 0.08407338173278556,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "PASS",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [],
+        "modeled_verdict": "PASS",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "FEASIBLE",
+      "decision": "PILOT in paper research only, with 0% new capital authorized. Consider adoption only after the assumptions are reviewed and independent performance, costs, liquidity and implementation evidence support it.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    },
+    "Constraint: U.S. equity cap at most 25%": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.04,
+        "additional_annual_cost": 0.0025,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 0.25,
+        "window_months": 60,
+        "equity_return_shift": 0.0
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 60,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.0834,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.03667156413091859,
+            "volatility": 0.004872127598099254,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": -0.010805919531034623,
+            "volatility": 0.07788790198546375,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": -0.0041503998636663215,
+            "volatility": 0.09851496361869454,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.1165406542667412,
+            "volatility": 0.15751474710988292,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.21541311965664622,
+            0.282853428238521,
+            0.24260457192713306
+          ],
+          [
+            0.21541311965664622,
+            1.0,
+            0.9338722092817835,
+            0.5317780796733119
+          ],
+          [
+            0.282853428238521,
+            0.9338722092817835,
+            1.0,
+            0.7128752203437682
+          ],
+          [
+            0.24260457192713306,
+            0.5317780796733119,
+            0.7128752203437682,
+            1.0
+          ]
+        ],
+        "observations": 60,
+        "first_return_month": "2021-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.07538135173318147,
+          "gross_return": 0.03456397475073971,
+          "net_return": 0.03206397475073971,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.8749365431128194,
+            0.054729969220137606,
+            0.04327060906995657,
+            0.02706287859708639
+          ],
+          "volatility": 0.01337106891030186,
+          "gross_return": 0.034468219155978294,
+          "net_return": 0.03196821915597829,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.11981960010983875,
+          "gross_return": 0.06693312868110453,
+          "net_return": 0.06443312868110453,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "FAIL"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium",
+            "U.S. equity weight <= configured cap"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": null
+      },
+      "best_within_risk": {
+        "weights": [
+          0.75,
+          0.0,
+          0.0,
+          0.25
+        ],
+        "volatility": 0.04042093300217823,
+        "gross_return": 0.056638836664874244,
+        "net_return": 0.05413883666487424,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "FAIL",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [
+          "Net return proxy >= Treasury rate + premium"
+        ],
+        "modeled_verdict": "FAIL",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "STOP \u2014 no feasible 5-point allocation",
+      "decision": "REJECT this scenario: no feasible allocation meets the return target and risk limits; do not relax the rules automatically.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    },
+    "Target: premium plus 1 percentage point": {
+      "config": {
+        "version": "0.2.1",
+        "portfolio_label": "U.S. stock and bond portfolio",
+        "decision_date": "2026-11-23",
+        "horizon_years": 7,
+        "scheduled_withdrawals": false,
+        "tickers": [
+          "BIL",
+          "IEF",
+          "LQD",
+          "VTI"
+        ],
+        "benchmark_weights": [
+          0,
+          0.2,
+          0.2,
+          0.6
+        ],
+        "return_premium": 0.05,
+        "additional_annual_cost": 0.0025,
+        "volatility_limit": 0.12,
+        "equity_weight_limit": 1.0,
+        "window_months": 60,
+        "equity_return_shift": 0.0
+      },
+      "price_source": {
+        "first_month": "2016-10-01",
+        "last_month": "2026-10-01",
+        "available_returns": 120,
+        "window_months": 60,
+        "retrieved_date": "2026-11-22",
+        "manifest": "sources/market/manifest.json",
+        "csv_sha256": "6a718fdae8a7c1eb4fe475a6eb6992aa0e3d8ad09db0f70f6c1c924b6af5cb47"
+      },
+      "signal": {
+        "series": "DGS3MO",
+        "vintage_date": "2026-11-22",
+        "file": "sources/market/DGS3MO.csv",
+        "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS3MO&vintage_date=2026-11-22",
+        "definition_url": "https://fred.stlouisfed.org/series/DGS3MO",
+        "sha256": "a79816524cceebae9a6f1569486959de85c406cfcfa2c87446c6dba7f6e1cf13",
+        "downloaded_utc": "2026-11-22T20:54:07.481087+00:00",
+        "units": "Percent per annum, investment basis",
+        "availability_rule": "Exact previous-calendar-day ALFRED vintage, fetched before the proposed decision day; no current-data fallback.",
+        "observation_date": "2026-11-19",
+        "rate_percent": 4.34,
+        "rate": 0.0434,
+        "decision_date": "2026-11-23"
+      },
+      "net_return_target": 0.09340000000000001,
+      "estimate": {
+        "sleeves": [
+          {
+            "name": "BIL",
+            "return": 0.03667156413091859,
+            "volatility": 0.004872127598099254,
+            "reserve": true
+          },
+          {
+            "name": "IEF",
+            "return": -0.010805919531034623,
+            "volatility": 0.07788790198546375,
+            "reserve": true
+          },
+          {
+            "name": "LQD",
+            "return": -0.0041503998636663215,
+            "volatility": 0.09851496361869454,
+            "reserve": false
+          },
+          {
+            "name": "VTI",
+            "return": 0.1165406542667412,
+            "volatility": 0.15751474710988292,
+            "reserve": false
+          }
+        ],
+        "correlations": [
+          [
+            1.0,
+            0.21541311965664622,
+            0.282853428238521,
+            0.24260457192713306
+          ],
+          [
+            0.21541311965664622,
+            1.0,
+            0.9338722092817835,
+            0.5317780796733119
+          ],
+          [
+            0.282853428238521,
+            0.9338722092817835,
+            1.0,
+            0.7128752203437682
+          ],
+          [
+            0.24260457192713306,
+            0.5317780796733119,
+            0.7128752203437682,
+            1.0
+          ]
+        ],
+        "observations": 60,
+        "first_return_month": "2021-11-01",
+        "last_return_month": "2026-10-01"
+      },
+      "portfolios": {
+        "Equal weight": {
+          "weights": [
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "volatility": 0.07538135173318147,
+          "gross_return": 0.03456397475073971,
+          "net_return": 0.03206397475073971,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Inverse volatility": {
+          "weights": [
+            0.8749365431128194,
+            0.054729969220137606,
+            0.04327060906995657,
+            0.02706287859708639
+          ],
+          "volatility": 0.01337106891030186,
+          "gross_return": 0.034468219155978294,
+          "net_return": 0.03196821915597829,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "60/40 benchmark": {
+          "weights": [
+            0,
+            0.2,
+            0.2,
+            0.6
+          ],
+          "volatility": 0.11981960010983875,
+          "gross_return": 0.06693312868110453,
+          "net_return": 0.06443312868110453,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "FAIL",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [
+            "Net return proxy >= Treasury rate + premium"
+          ],
+          "modeled_verdict": "FAIL",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        },
+        "Constrained portfolio": {
+          "weights": [
+            0.25,
+            0.0,
+            0.0,
+            0.75
+          ],
+          "volatility": 0.11843745518055378,
+          "gross_return": 0.09657338173278555,
+          "net_return": 0.09407338173278555,
+          "rules": {
+            "Fully invested and long-only": "PASS",
+            "Net return proxy >= Treasury rate + premium": "PASS",
+            "Annual volatility <= limit": "PASS",
+            "U.S. equity weight <= configured cap": "PASS"
+          },
+          "failed_rules": [],
+          "modeled_verdict": "PASS",
+          "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+        }
+      },
+      "best_within_risk": {
+        "weights": [
+          0.25,
+          0.0,
+          0.0,
+          0.75
+        ],
+        "volatility": 0.11843745518055378,
+        "gross_return": 0.09657338173278555,
+        "net_return": 0.09407338173278555,
+        "rules": {
+          "Fully invested and long-only": "PASS",
+          "Net return proxy >= Treasury rate + premium": "PASS",
+          "Annual volatility <= limit": "PASS",
+          "U.S. equity weight <= configured cap": "PASS"
+        },
+        "failed_rules": [],
+        "modeled_verdict": "PASS",
+        "deployment_verdict": "FAIL \u2014 validation and review incomplete"
+      },
+      "status": "FEASIBLE",
+      "decision": "PILOT in paper research only, with 0% new capital authorized. Consider adoption only after the assumptions are reviewed and independent performance, costs, liquidity and implementation evidence support it.",
+      "deployment_gaps": [
+        "student and committee review",
+        "independent performance evaluation",
+        "observed costs, liquidity and implementation evidence"
+      ]
+    }
+  }
+}

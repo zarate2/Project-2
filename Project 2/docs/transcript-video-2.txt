@@ -1,0 +1,33 @@
+Project 2 — Video 2 transcript draft
+
+Source: captions in the CapCut draft “1123,” timeline duration 4:52. Timestamps are caption start times. CapCut speech recognition was cleaned for clear tickers, names, and figures against the project files. Listen to the recording and correct any wording that does not match what was actually said before submitting.
+
+[00:00] Hi, my name is David Zarate, and this is my Video 2 for Project 2.
+
+[00:05] I use ChatGPT-6 Luna through Codex to help develop, modify, and produce this financial application. I reviewed and agree with the analysis and recommendation. Everything here is for education, not investment advice.
+
+[00:20] First, we’ll talk about my calculations—or, well, I guess just the configuration of everything. We have four funds here: BIL, the Treasury bills; IEF; LQD; and the equities, VTI.
+
+[00:40] We have the saved settings here, which include the horizon, portfolio label, and decision date. We have no scheduled withdrawals. Our benchmark weights are 20%, 20%, and 60%. Finally, we have the return premium, additional cost, and everything else we explained in the last video. If you add this to the risk-free rate, you get the target premium of 8.34%.
+
+[01:10] Next, we’ll talk about the market data. The app reads retained prices and data from the Treasury source. It checks that the requested information is available for the chosen date and window. The model uses completed monthly data through October 2026 rather than a live price feed.
+
+[01:26] It’s importing data from another file over here. It’s a giant file—not this one. No, this one. There you go. It has all of the data. You can see it’s almost 11,800 lines of data, and it shows the risk-free rate over time.
+
+[01:55] Next, we’ll talk about the tools we use in the actual model and how it makes a decision. In `model.py`, we calculate and load the settings, read the data, estimate returns, volatility, and correlation, and build a covariance matrix. It compares equal-weight, inverse-volatility, and 60/40 benchmark portfolios. Then it searches long-only allocations in five-percentage-point steps.
+
+[02:21] In `evaluate`, each candidate is checked against four rules: weights must total 100%; the net return estimate must meet the Treasury-plus-premium hurdle; volatility must stay at or below 12%; and the U.S. equity weight must stay within its configured cap. Among candidates passing every rule, the model selects the one with the lowest estimated volatility. If none passes, it stops and reports no feasible allocation rather than quietly relaxing a rule.
+
+[02:50] We can slowly look through all this and see that. For the current saved assumptions, the app reports 35% BIL and 65% VTI—35% Treasury bills and 65% equities. This gives an 8.61% estimated net return and 10.28% estimated volatility. That passes the model’s return and risk screens.
+
+[03:10] The separate deployment check still fails. Independent performance, real costs, liquidity, implementation, and review evidence are incomplete, so the recommendation is paper research only, with zero new capital authorized. A model pass is not proof of future performance.
+
+[03:25] The code also rejects malformed settings, missing or inconsistent monthly data, invalid weights, and invalid correlation inputs. The stress suite changes one assumption at a time, including the return estimate, estimation window, cost, equity cap, and return premium. These are visible sensitivity results; they are not predictions I made before seeing the output.
+
+[03:46] In my earlier changed-input test, the baseline premium was 3.5 percentage points, with a 60-month window, zero VTI shift, 0.25% added annual cost, a 12% volatility limit, and a 100% U.S. equity cap. The model showed 40% BIL and 60% VTI.
+
+[04:10] I recorded a prediction to raise only the premium from 3.5% to 4.5%. I expected BIL to fall and VTI to rise because the optimizer would need more return under the same limits. The recorded result was 30% BIL and 70% VTI. I can show you right now: we move to 4.5%, and we see 30% BIL and 70% VTI right there.
+
+[04:33] It moved in the direction I predicted. This is an observed model response, not evidence of future performance. The code makes assumptions and constraints visible, but it does not establish that this is a valid investment strategy. My decision remains zero capital until the missing evidence and independent review are complete.
+
+Before submission, verify the transcript against the final recording, especially the data-file description around 01:26 and the experiment wording around 03:46. This draft is based on the current CapCut timeline and should be updated if you edit or shorten the video.

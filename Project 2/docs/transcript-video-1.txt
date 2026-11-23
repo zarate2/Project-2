@@ -1,0 +1,19 @@
+Project 2 — Video 1 transcript
+
+Draft transcript from CapCut Auto Captions. Punctuation and obvious recognition errors were cleaned up. Check the marked unclear passage against the recording before submission. Timestamps are approximate caption start times.
+
+[00:00:00] Hi. My name is David Zarate, and this is my Project 2. So, before we start, I used ChatGPT-6 Luna through Codex to help develop, modify, and produce this financial application. I reviewed and agree with the analysis and recommendation. The analysis and decision are mine. This is for education, not investment advice.
+
+[00:00:28] So, how my thinking has changed over time: in the earlier version, I used an inflation-based return target, global equities, and scheduled withdrawals. However, I read through the assignment more and realized that maybe those weren't really appropriate. So, I decided to go with more Treasury, risk-free investments, as well as equities—domestic equities, I should say. We also used a 60/40 stock-and-bond benchmark, based on that.
+
+[00:01:01] We also got rid of the idea of withdrawals. [Unclear: the captions around the payout schedule are garbled.] I got rid of the payout schedule and a reserve. I didn't need a reserve. I also determined a horizon, which is a seven-year planning horizon. We also had a 12% annualized-volatility limit. This model looks for the lowest estimated volatility among portfolios that meet the return target and risk limit.
+
+[00:01:29] Next, we're going to talk about what I checked. So, if I go into—sorry about that, I changed my list. Stop sharing. But essentially, what I checked was to make sure that the risk-free rate was correct, and also the target return above the risk-free rate.
+
+[00:01:52] This is where I get the data for my risk-free rates. Here's the risk-free rate right here. This is 4.34, plus the 4% above equity right there, so yes.
+
+[Editorial note—not spoken:] 4.34% + 4.00 percentage points = 8.34%.
+
+[00:02:12] With the 60-month estimation window, the testing portfolio now has requirements of an 8.34% return and a 10% volatility limit. The best return is estimated to be 8.21%. With the current risk limit of 12%, the best—[unclear]. The base case is rejected and no allocation is selected. A 36-month sensitivity produces a feasible result, but that is a different estimation window, not proof that the process works. I agree with rejecting the base case and authorizing no capital.
+
+Editorial check before submission (not spoken): the recording mentions both 10% and 12% volatility limits and gives the old rejected-base-case result. The current app uses a 12% limit and now reports a feasible 35% BIL / 65% VTI mix at 8.61% estimated net return and 10.28% estimated volatility. Re-record or reconcile the video and current project materials before submitting.

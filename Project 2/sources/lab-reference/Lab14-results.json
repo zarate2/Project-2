@@ -1,0 +1,122 @@
+{
+  "Benchmark": {
+    "weights": [
+      0.0,
+      0.0,
+      0.4,
+      0.6
+    ],
+    "return": 0.068,
+    "volatility": 0.10461357464497617,
+    "reserve": 0.0,
+    "meets_objective": true,
+    "allocation_checks": [
+      {
+        "rule": "Weights sum to 100",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Long-only (lowest weight)",
+        "measured_percent": 0.0,
+        "passed": true
+      },
+      {
+        "rule": "Reserve >= 3.0%",
+        "measured_percent": 0.0,
+        "passed": false
+      },
+      {
+        "rule": "Redeemable in 5 days >= 90.0%",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Largest single company <= 8.0%",
+        "measured_percent": 0.0,
+        "passed": true
+      }
+    ],
+    "passes_allocation_checks": false
+  },
+  "Equal weight": {
+    "weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "return": 0.052000000000000005,
+    "volatility": 0.05214463059606425,
+    "reserve": 0.5,
+    "meets_objective": false,
+    "allocation_checks": [
+      {
+        "rule": "Weights sum to 100",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Long-only (lowest weight)",
+        "measured_percent": 0.0,
+        "passed": true
+      },
+      {
+        "rule": "Reserve >= 3.0%",
+        "measured_percent": 50.0,
+        "passed": true
+      },
+      {
+        "rule": "Redeemable in 5 days >= 90.0%",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Largest single company <= 8.0%",
+        "measured_percent": 0.0,
+        "passed": true
+      }
+    ],
+    "passes_allocation_checks": true
+  },
+  "Inverse volatility": {
+    "weights": [
+      0.8431618569636136,
+      0.06022584692597239,
+      0.07026348808030113,
+      0.026348808030112924
+    ],
+    "return": 0.03772145545796738,
+    "volatility": 0.010497280464050724,
+    "reserve": 0.903387703889586,
+    "meets_objective": false,
+    "allocation_checks": [
+      {
+        "rule": "Weights sum to 100",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Long-only (lowest weight)",
+        "measured_percent": 0.0,
+        "passed": true
+      },
+      {
+        "rule": "Reserve >= 3.0%",
+        "measured_percent": 90.3387703889586,
+        "passed": true
+      },
+      {
+        "rule": "Redeemable in 5 days >= 90.0%",
+        "measured_percent": 100.0,
+        "passed": true
+      },
+      {
+        "rule": "Largest single company <= 8.0%",
+        "measured_percent": 0.0,
+        "passed": true
+      }
+    ],
+    "passes_allocation_checks": true
+  }
+}

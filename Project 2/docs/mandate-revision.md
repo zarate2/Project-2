@@ -1,0 +1,34 @@
+# Revised mandate and rationale
+
+Drafted November 22, 2026 from the student's stated preferences and updated the same day for the revised volatility ceiling. The original policy migration led to version 0.2.0; the 12% ceiling is implemented in version 0.2.1. The current [mandate](mandate.md), app and saved outputs use BIL, IEF, LQD, and VTI. The earlier inflation/global-equity/withdrawal results remain historical only.
+
+## Decisions and explanations
+
+**Goal: seek a return premium over a short-term Treasury reference, after costs.** The student wants compensation for accepting equity and corporate-credit risk instead of holding low-risk Treasury bills. This is a defensible reason to set an excess-return target. It does not establish that the target is achievable or that additional risk guarantees additional return. The exact premium is a policy judgment, not an observed market equity risk premium. [FCA explanation of risk and returns](https://www.fca.org.uk/investsmart/risk-returns).
+
+The implemented proposal is an estimated annual net return of at least `risk-free reference + 4 percentage points`, with `+5 percentage points` as a separate stress case. Use percentage points, not a percentage increase in the Treasury rate. This replaces the old inflation-plus-3-point objective; it is not a promise of real purchasing-power growth or a seven-year realized return.
+
+**Risk-free reference: three-month U.S. Treasury constant-maturity yield.** [Federal Reserve series DGS3MO via FRED](https://fred.stlouisfed.org/series/DGS3MO) is quoted on an investment basis, in percent per annum, with daily observations. Version 0.2.0 retains the November 22, 2026 ALFRED vintage for the proposed November 23 decision. The latest included observation is November 19 at 4.34%. This is a short-term cash reference; rolling it over for seven years creates reinvestment uncertainty.
+
+**Horizon: seven years.** Choose seven to make the student's six-to-seven-year preference operational. This allows a multi-year holding period for a stock-and-bond allocation while keeping the exercise focused on a defined end date. It does not mean equities become unsuitable after seven years. Time horizons can span decades; allocation should reflect both time available and willingness to bear losses. [SEC guidance on time horizon and allocation](https://www.investor.gov/introduction-investing/getting-started/asset-allocation).
+
+**Withdrawals: none scheduled.** The [Project 2 assignment](../sources/Assignment.md) does not mandate withdrawals. Following the student's instruction, remove the earlier $50,000 quarterly distributions and the payout-derived reserve requirement in the implementation. Withdrawals are spending, not a protection against investment losses. Treasury bills may remain an eligible low-risk investment without a forced payout reserve. The portfolio can be reported in weights or normalized wealth; no invented client balance is necessary to explain the policy.
+
+**Allowed investments: U.S. Treasury securities, investment-grade corporate bonds and diversified domestic equities.** Use fund proxies to keep the implementation simple and diversified within each category. The investment-grade qualifier retains the existing corporate-bond scope; no high-yield or individual-stock selection is added. Treasury bills can remain within the Treasury category. The current VT global-equity series must be replaced with a suitable U.S.-equity series and new dated provenance. Domestic-only exposure is a chosen boundary, not a claim of global diversification or superior returns.
+
+**Benchmark: a transparent 60% U.S.-equity / 40% bond portfolio.** This provides a recognizable fixed allocation against which to judge whether optimization adds value. A 60/40 structure is used in established balanced products, including [Vanguard's LifeStrategy 60/40 fund](https://workplace.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F0914.pdf). That product is global; it supports the general structure, not our exact domestic portfolio or its performance. Define the benchmark's Treasury/corporate bond split before evaluation. An equal split of its bond portion—20% Treasuries and 20% corporate bonds—is a simple implementation proposal, not an industry-mandated composition. Equal weight and inverse volatility remain the two separate required baselines.
+
+**Risk limit: estimated annualized volatility no greater than 12%.** The student revised the proposed ceiling from 10% to 12% to allow somewhat more modeled risk in pursuit of the return objective while still limiting volatility. This is a chosen risk budget, not a statistically proven optimal threshold or maximum possible loss. Risk above the ceiling would need a commensurate expected return, and more risk does not guarantee more return. If no eligible portfolio clears the return target within the limit, report infeasibility and keep capital deployment rejected.
+
+**Selection method: minimize estimated volatility among eligible portfolios that meet the net return target.** This turns the student's preference into an explicit rule: if two feasible allocations meet the goal, favor the one with less estimated volatility. The search can establish the minimum only within the specified investment universe and allocation grid. It cannot prove that no other investment anywhere offers a better tradeoff. Compare the result with both simple baselines and the 60/40 benchmark using the same information, costs and dates.
+
+## Implementation and remaining validation
+
+1. The dated Treasury signal and domestic-equity proxy are implemented and retained with source hashes.
+2. The app compares equal weight, inverse volatility, the 60/40 benchmark, and a minimum-volatility constrained portfolio. The base case is infeasible; the app does not relax limits.
+3. Withdrawals and payout reserves are removed. The separate equity cap is set at 100%, leaving the volatility constraint to limit equity in the modeled search.
+4. The 0.25% cost, 12% volatility ceiling, 4-point premium, and annual arithmetic estimator remain policy/model assumptions that need student review and empirical support.
+5. A seven-year planning horizon is not seven years of demonstrated performance. The current calculations do not validate realized outcomes, costs, liquidity, turnover, or out-of-sample performance.
+6. Human AI-off prediction, independent reviewer challenge, student ownership, and submission evidence remain incomplete. Preserve the previous baseline and do not pass known sensitivities off as personal predictions.
+
+These rationales were AI-assisted from the student's input, with the listed primary sources reviewed November 22. They are not the student's AI-off prediction. This step records policy choices; it does not complete implementation, personal review or the locked experiment.
